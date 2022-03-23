@@ -9,5 +9,5 @@ use Factory\DependencyFactory;
 $di = new Container();
 $di->register(DependencyFactory::getDependencies());
 
-echo "<pre>";print_r((new HomeController($this->di->get('ShippingCostService')))->index());
+echo "<pre>";print_r((new HomeController($di->get('ShippingCostService')))->index());
 
